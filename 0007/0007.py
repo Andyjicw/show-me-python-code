@@ -21,7 +21,11 @@ for line in file.xreadlines():
     codef = open(line.strip())
     for codeLine in codef.xreadlines():
         codeLine = codeLine.strip('\n')
-        if codeLine.lstrip()[:2] == '//' or codeLine.lstrip()[:2] == '/*' or codeLine.lstrip()[:2] == '#p' or codeLine.lstrip()[:1] == '*' or codeLine.lstrip() == '':
+        if codeLine.lstrip()[:2] == '//' or\
+                        codeLine.lstrip()[:2] == '/*' or\
+                        codeLine.lstrip()[:2] == '#p' or\
+                        codeLine.lstrip()[:1] == '*' or\
+                        codeLine.lstrip() == '':
             pass
         else:
             # print(codeLine,)
